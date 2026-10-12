@@ -1,96 +1,76 @@
 # Wild Apricot MCP
 
-**Connect your AI assistant to Wild Apricot for member administration, events, financial records, and website work.**
+**Put your AI assistant to work in Wild Apricot.** Search contacts, update memberships, manage events and work with supported financial records using plain-language requests.
 
-Created and owned by **Justin Williams**. Built for Wild Apricot organizations and service providers working with authorized client accounts.
+Created and owned by **Justin Williams**, under the **Tamed Apricot** brand. Built for Wild Apricot organizations and consultants working on an authorized client website.
 
 **117 supported API operations · 35 native gadget guides · 3 skill categories**
 
-[Discuss a demonstration or license](mailto:justin@justw.me?subject=Wild%20Apricot%20MCP%20inquiry)
+**US$29/month** includes one Wild Apricot website, **5,000 hosted API-tool calls per calendar month (UTC)**, the local website companion and updates. There are no automatic overage charges. Your AI application and Wild Apricot subscriptions are separate.
 
-## What it does
+[Explore the product](https://tamedapricot.com/wild-apricot-mcp) · [Create your account](https://app.tamedapricot.com/sign-up)
 
-Describe a task in ordinary language. Your AI assistant uses the MCP's tools to read or update Wild Apricot and return the result.
+## Get connected
 
-Use it to:
+1. **Create your account.** Verify your email, review the terms and complete secure Stripe checkout.
+2. **Connect Wild Apricot.** Save your Wild Apricot API key in the customer portal and choose the website to connect. Keep the key out of chat.
+3. **Add the MCP to your AI application.** Use this server address, then sign in and authorize the connection:
 
-- Find and update contacts and members, review membership information, and handle pending membership approvals.
-- Create and update events, work with registrations and waitlists, and check in attendees.
-- Review or update invoices, payment records, refunds, and donations.
-- Work with supported email operations, store products and orders, and continuing-education records.
-- Update page content through the Wild Apricot website editor and check the saved result.
+   ```text
+   https://mcp.tamedapricot.com/mcp
+   ```
 
-The package supports both reading and writing. Each installation connects to its own Wild Apricot account and uses that account's authorized access.
+4. **Start with a read.** Ask, “Which Wild Apricot account am I connected to?” Then give your assistant a task.
+
+Use an application with remote MCP support, such as **ChatGPT, Codex, Claude, Cursor, VS Code or Google Antigravity**. Connection options depend on the application and plan. The hosted API connection does not require installing the server on your computer.
+
+## What you can do
+
+- Find and update contacts, review memberships, work with levels and groups, and handle supported membership workflows.
+- Create and update events, manage registrations and waitlists, and work with attendee check-in records.
+- Read and manage supported invoices, payment and donation records, store orders and other official API resources.
+- Use the local companion for configured website-content edits and guided gadget workflows.
+
+Read and write tools are available. Writes change real Wild Apricot records; you can enable read-only access in your connection settings. For clear results, name the person, event or page, specify the exact change, and ask the assistant to confirm what was saved.
 
 ## How it works
 
-**MCP** stands for **Model Context Protocol**. It is a standard way for an AI application to discover tools and request actions. Your chosen application supplies the AI; Wild Apricot MCP supplies the connection to Wild Apricot.
+**MCP** means **Model Context Protocol**: a standard way for an AI application to discover tools and request actions. Your chosen application supplies the AI; Tamed Apricot supplies the connection to Wild Apricot.
 
-**Your request → AI assistant → Wild Apricot MCP → Wild Apricot**
+**Your request → AI assistant → hosted MCP → your Wild Apricot account**
 
-Two connections handle different kinds of work:
+Your API key is stored encrypted in the customer portal. Your AI application connects through an authorized OAuth sign-in, so you do not share the Wild Apricot key with it. Manage your connection, subscription and authorized AI sessions in the portal.
 
-| Connection | What it handles |
-| --- | --- |
-| **Wild Apricot API** | Business records such as contacts, memberships, events, registrations, and invoices, using your API key. |
-| **Signed-in Google Chrome** | Website-editor work using your administrator session and configured page and gadget targets. |
+Website work uses the **local companion**, downloaded through your paid customer account, plus a compatible desktop AI application and your signed-in Chrome administrator session. It edits configured **Content** and **Custom HTML** gadgets and provides guides for **35 native gadgets**. The hosted API tools handle business records; the companion works through the website editor.
 
-The server runs locally as a Node.js program. Your AI application starts it and exchanges messages through a local MCP connection, known as **stdio**. Website workflows use the browser connection when needed.
-
-## Three skill categories
-
-Skills are reusable instructions that help the assistant follow a consistent process.
+## Three reusable skill categories
 
 | Category | What it helps you do |
 | --- | --- |
-| **Wild Apricot Operations** | Find the right records, perform member, event, registration, and financial tasks, and confirm saved changes. |
-| **Wild Apricot Website Editor** | Edit existing, configured **Content** and **Custom HTML** gadgets through Chrome. Use the **35 native gadget guides** with a companion browser connection for directories, forms, menus, calendars, photos, and other gadget settings. |
-| **Wild Apricot Website QA** | Reopen saved content and check links, audience access, preserved gadgets, and desktop, tablet, and mobile layouts using the appropriate browser sessions. |
+| **Wild Apricot Operations** | Plan and perform contact, membership, event and business tasks, then confirm the saved result. |
+| **Wild Apricot Website Editor** | Edit configured page content and follow native gadget guides through the local companion and Chrome. |
+| **Wild Apricot Website QA** | Check saved content, links, audience access and desktop, tablet and phone layouts. |
 
-The instructions can be installed as skills where your AI application supports them, or used as workflow references.
+Skills are reusable instructions for your assistant. Install them where your application supports skills, or use them as workflow references.
 
-## Applications you can use
+## Try asking
 
-Wild Apricot MCP uses the local MCP connection supported by applications such as:
+> Summarize active members by membership level.
 
-- **[Codex](https://developers.openai.com/codex/mcp)**
-- **[Claude Desktop](https://modelcontextprotocol.io/docs/2026-07-28/develop/connect-local-servers)** with local MCP configuration
-- **[Cursor](https://cursor.com/docs/mcp)**
-- **[VS Code with GitHub Copilot](https://code.visualstudio.com/docs/agent-customization/mcp-servers)**
-- **[Google Antigravity](https://antigravity.google/docs/mcp)**
+> Find this contact, update only their phone number, and confirm the saved value.
 
-Each application has its own MCP configuration and permission controls. Website work also uses Google Chrome.
+> List registrations for this event, including registration type and payment status.
 
-## Getting started
+> Update the introduction on my configured page, preserve the native gadgets, and check the result on desktop and phone.
 
-1. **Arrange your license.** Contact Justin to agree on the team, organization or client accounts, and any onboarding or support needed.
-2. **Install the package.** Authorized users receive the installation package, documentation, and configuration examples. Install Node.js **22.12 or newer** and the package on the computer running your AI application.
-3. **Connect your account.** Create a Wild Apricot server-application API key, keep it in a private local configuration file, and register the local MCP server in your AI application.
-4. **Confirm the connection.** Restart the application and ask the assistant to identify the connected organization. Add the skill instructions where supported.
-5. **Add website work.** Configure the intended pages and gadgets, sign in to Chrome as a Wild Apricot administrator, and add the companion browser connection for native gadget settings.
+## Subscription and ownership
 
-## Example requests
+Your paid subscription grants immediate use for **one authorized Wild Apricot website**, including consulting for its owner. Cancel before renewal and retain access through the paid period. Your first subscription payment, including tax, is refundable within seven calendar days under the [refund policy](https://app.tamedapricot.com/refunds).
 
-> Summarize all active members by membership level.
+Wild Apricot MCP is **proprietary software owned by Justin Williams**. Redistribution and resale are not included. Companion-use permission ends with your subscription unless separately licensed. See the [subscription terms](https://app.tamedapricot.com/terms) and [privacy notice](https://app.tamedapricot.com/privacy).
 
-> Find the contact with this email address, update only their phone number, and confirm the saved value.
+**Support:** [hello@tamedapricot.com](mailto:hello@tamedapricot.com)
 
-> List everyone registered for this event, including their registration type and payment status.
-
-> List all unpaid invoices, group them by contact, and total the balances.
-
-> Update the introduction on my configured page. Preserve the native gadgets and check the saved result on desktop, tablet, and mobile.
-
-For useful results, identify the exact person, event, or page; specify the date range or requested change; and ask the assistant to confirm what was saved.
-
-## Licensing and contact
-
-Wild Apricot MCP is **proprietary software owned by Justin Williams**. Use is licensed by written agreement, including the scope of any work on client accounts. Pricing, account coverage, updates, and support are agreed before purchase.
-
-**Contact:** [justin@justw.me](mailto:justin@justw.me?subject=Wild%20Apricot%20MCP%20inquiry)
-
-This repository contains the public product overview only. The MCP implementation, reusable skill files, and installation packages are distributed privately to authorized users. Access to this overview does not grant a software license.
-
-Product scope described here: **version 0.2.6**.
+This public repository contains the product overview only. Implementation code, skill files and installation packages remain private and are provided through authorized access. Viewing this overview does not grant a software license.
 
 Copyright © 2026 Justin Williams. All rights reserved. See [COPYRIGHT](COPYRIGHT).
